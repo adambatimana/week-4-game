@@ -39,7 +39,6 @@ function selectRandomVal(){
   console.log(squareVal);
 }
 
-
 //find sum off array of numbers
 function getSum(total, num){
   return total + num;
@@ -62,6 +61,7 @@ function checkWin(){
     newGame();
   }
 }
+
 function newGame(){
   selectRandomNum();
   selectRandomVal();
@@ -70,41 +70,57 @@ function newGame(){
   totalDisplay.html(totalScore);
   numbers = [0];
 }
+
 // ***************************** INVOKE FUNCTIONS  ****************************
 function gameStart(){
-selectRandomNum();
-selectRandomVal();
-//send random comp number to html
-compScore.html(compNum);
-//display total score in total field
-totalDisplay.html(totalScore);
+  selectRandomNum();
+  selectRandomVal();
+  //send random comp number to html
+  compScore.html(compNum);
+  //display total score in total field
+  totalDisplay.html(totalScore);
+  $(".gameStage").hide();
+  $("#begin").show();
 }
 gameStart();
 
-// ***************************** games start function  ****************************
+// ***************************** Game start function  ****************************
+
+
+//hide gameStage and show click to begin
+ $("#begin").on("click", function () {
+   $(".gameStage").show();
+   $("#begin").hide();
+ });
+
 $(document).on("click", "button", function () {
-//every time a button is pressed add value of that number to total SCORE
-if ($(this).hasClass("triangle")) {
-  //if button pressed has class of triangle add triangle value to total score
-  numbers.push(triVal);
-  console.log(this);
-}
-if ($(this).hasClass("ruby")) {
-  //if button pressed has class of triangle add triangle value to total score
-  numbers.push(rubyVal);
-  console.log(this);
-}
-if ($(this).hasClass("diamond")) {
-  //if button pressed has class of triangle add triangle value to total score
-  numbers.push(diaVal);
-  console.log(this);
-}
-if ($(this).hasClass("square")) {
-  //if button pressed has class of triangle add triangle value to total score
-  numbers.push(squareVal);
-  console.log(this);
-}
+    //every time a button is pressed add value of that number to total SCORE
+      if ($(this).hasClass("triangle")) {
+          //if button pressed has class of triangle add triangle value to total score
+          numbers.push(triVal);
+          console.log(this);
+        }
+
+        if ($(this).hasClass("ruby")) {
+          //if button pressed has class of triangle add triangle value to total score
+          numbers.push(rubyVal);
+          console.log(this);
+        }
+
+        if ($(this).hasClass("diamond")) {
+          //if button pressed has class of triangle add triangle value to total score
+          numbers.push(diaVal);
+          console.log(this);
+        }
+
+        if ($(this).hasClass("square")) {
+          //if button pressed has class of triangle add triangle value to total score
+          numbers.push(squareVal);
+          console.log(this);
+        }
+
 getSum();
 totalDisplay.html(numbers.reduce(getSum));
 checkWin();
+
  });
