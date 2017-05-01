@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JavaScript Game</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +19,9 @@
     <div class="row">
 
       <div class="col-sm-12">
-
+        <div class="well well-lg" id = "header">
+          <h1> CRYSTAL COLLECTOR </h1>
+        </div>
       </div>
 
     </div>
@@ -24,7 +29,13 @@
     <div class="row">
 
       <div class="col-sm-12">
-
+        <div class="well well-sm" id="intro">
+          <p>You will be give a random number at the start of the game</p>
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+          <p>You win the game by matching your total score to random number, you lose the game if your total score goes about the random number.</p>
+          <p>The value of each crystal is hidden from you until you click on it.</p>
+          <p>Each time when the game starts, the game will change the values of each crystal</p>
+        </div>
       </div>
 
     </div>
@@ -32,25 +43,16 @@
     <div class="row">
 
       <div class="col-md-6">
-
+        <div id = "comp" class="well well-sm">
+            <h2>COMPUTER</h2>
+            <h2>100</h2>
+        </div>
       </div>
       <div class="col-md-6">
-
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-3">
-
-      </div>
-      <div class="col-md-3">
-
-      </div><div class="col-md-3">
-
-      </div><div class="col-md-3">
-
+        <div id = "wl" class="well well-sm">
+            <h2>WIN</h2>
+            <h2>LOSE</h2>
+        </div>
       </div>
 
     </div>
@@ -58,18 +60,34 @@
     <div class="row">
 
       <div class="col-md-12">
-
+        <div class="well" id= "total">
+          <h3>Your Total Score: </h3>
+          <h3>100</h3>
+        </div>
       </div>
 
     </div>
 
     <div class="row">
 
-      <div class="col-md-12">
-
+      <div class="col-md-3">
+        <a href="#" class="btn btn-warning"><img src="assets/images/triangle.jpg" alt=""></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="btn btn-primary"><img src="assets/images/ruby.jpg" alt=""></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="btn btn-success"><img src="assets/images/diamond.jpg" alt=""></a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="btn btn-info"><img src="assets/images/square.jpg" alt=""></a>
       </div>
 
     </div>
+
+
+
+
   </div>
 </body>
 </html>

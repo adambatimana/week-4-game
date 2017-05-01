@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+.cf {
+  overflow: auto;
+}
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+/**
+iceburg #61ADCE
+tangelo #FFBB72
+spring bud #CBE5A2
+carmine pink #F46672
+solid pink #893146
+
+**/
+
+
+h1, h2, h3, h4{
+  text-align: center;
+  color: #FFF;
+}
+#header h1{
+  color: #893146;
+}
+
+.well-lg{
+  background: #CBE5A2;
+}
+
+.well-sm{
+  background: #FFBB72;
+}
+
+#intro{
+  background: #F46672;
+  color: #FFF;
+}
+
+#comp{
+  background: #61ADCE;
+}
+
+#total{
+  background: #893146;
+  color: #FFF;
+}
