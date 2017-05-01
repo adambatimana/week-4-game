@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -45,13 +46,13 @@
       <div class="col-md-6">
         <div id = "comp" class="well well-sm">
             <h2>COMPUTER</h2>
-            <h2>100</h2>
+            <h2 class="compScore">100</h2>
         </div>
       </div>
       <div class="col-md-6">
         <div id = "wl" class="well well-sm">
-            <h2>WIN</h2>
-            <h2>LOSE</h2>
+            <h2>WIN <span class="wins">100</span></h2>
+            <h2>LOSE <span class="loss">100</span></h2>
         </div>
       </div>
 
@@ -89,5 +90,6 @@
 
 
   </div>
+  <script src="assets/js/game.js"></script>
 </body>
 </html>
