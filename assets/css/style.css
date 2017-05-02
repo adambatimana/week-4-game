@@ -26,11 +26,16 @@ carmine pink #F46672
 solid pink #893146
 
 **/
-
+body{
+  letter-spacing: .125em;
+}
 
 h1, h2, h3, h4{
   text-align: center;
   color: #FFF;
+}
+p {
+  margin-top: 1em;
 }
 #header h1{
   color: #893146;
